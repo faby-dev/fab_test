@@ -4,6 +4,7 @@ namespace App\Entity;
 
 use App\Repository\EtudiantsRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass=EtudiantsRepository::class)
@@ -20,21 +21,25 @@ class Etudiants
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank(message="Le Nom est obligatoire")
      */
     private $Nom;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank(message="Le Prénom est obligatoire")
      */
     private $Prenom;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank(message="La Sexe est obligatoire")
      */
     private $Sexe;
 
     /**
      * @ORM\Column(type="date")
+     * @Assert\NotBlank(message="La Date de naissance est obligatoire")
      */
     private $DateDeNaissance;
 

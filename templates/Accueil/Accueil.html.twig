@@ -23,7 +23,7 @@
                         <button class="btn btn-warning btn-block">Envoier un email</button>
                     </div>
                     <div class="col-4">
-                        <button class="btn btn-dark btn-block">Ajouter Etudiants</button>
+                        <button class="btn btn-dark btn-block" id="affiche">Ajouter Etudiants</button>
                     </div>
                     <div class="col-4">
                         <button class="btn btn-danger btn-block">Genere un pdf</button>
@@ -66,7 +66,50 @@
                 </div>
             </div>
         </div>
-
     </div>
+    <!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">      
+      <div class="modal-body">
+        <div class="row">
+            <div class="col">
+                <button type="button" class="btn-close float-end" data-bs-dismiss="modal" aria-label="Close" id="ferm"></button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <form action="" method="post" id="ajoutEtudiants">
+                    <div class="mb-3">
+                        <label for="nom" class="form-label">Nom:</label>
+                        <input type="text" class="form-control" id="nom" placeholder="Votre Nom" name="nom">
+                    </div>
+                    <div class="mb-3">
+                        <label for="prenom" class="form-label">Prénom: </label>
+                        <input type="text" name="prenom" id="prenom" class="form-control" placeholder="Votre Prénom" >                       
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleFormControlTextarea1" class="form-label">Sexe: </label>
+                        <select class="form-select" aria-label="Default select example" id"sexe">
+                            <option selected>Selectioner</option>
+                            <option value="1">Masculin</option>
+                            <option value="2">Feminin</option>
+                            <option value="3">Autre</option>
+                        </select>                       
+                    </div>
+                    <div class="mb-3">
+                        <label for="datedenaissance" class="form-label">Date De Naissance:</label>
+                        <input type="date" name="datedenaissance" id="" class="form-control" placeholder="Date de Naissance">                       
+                    </div>
+                    <div class="mb-3 d-grid gap-2">
+                        <button type="submit" class="btn btn-success"> Enregistre</button>                    
+                    </div>
+                </form>
+            </div>
+        </div>
+      </div>      
+    </div>
+  </div>
+</div>
     
 {% endblock %}
